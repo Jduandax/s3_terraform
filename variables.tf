@@ -7,5 +7,22 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "Nombre del bucket de S3"
   type        = string
-  default     = "devops-test"
+  default     = "uat-s3-images-digital-core-m"
+}
+
+variable "enable_versioning" {
+  description = "Habilitar o deshabilitar el versioning del bucket"
+  type        = bool
+  default     = false
+}
+
+variable "enable_encryption" {
+  description = "Habilitar o deshabilitar la encriptación del bucket"
+  type        = bool
+  default     = false
+}
+variable "enable_public_access_block" {
+  description = "Habilitar o deshabilitar restricciones de acceso público"
+  type        = bool
+  default     = true
 }
